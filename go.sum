@@ -1,0 +1,12 @@
+github.com/KernTom/go-elast-logger v0.0.0-20200305114429-10cad7bb96cb h1:SvQ5eG/lBLfJMA4NUXSrilOhAPVAs8C1rYlwNjjgJ74=
+github.com/KernTom/go-elast-logger v0.0.0-20200305114429-10cad7bb96cb/go.mod h1:AlkU61OF8c3W6zZOAeQqEn9D/12PddaYH+pwhKKh2d4=
+github.com/KernTom/go-server v0.0.0-20200305120253-bd1a4cb9c4c5 h1:oZdm7lI70tJTeKpNsdtDxg0WY5NXhC8y9r2EDddb+MQ=
+github.com/KernTom/go-server v0.0.0-20200305120253-bd1a4cb9c4c5/go.mod h1:/thVD9eV3yO5cMW6Gd31tsCbxLfEOjvYCD8XvNH8qSA=
+github.com/elastic/go-elasticsearch/v7 v7.6.0 h1:sYpGLpEFHgLUKLsZUBfuaVI9QgHjS3JdH9fX4/z8QI8=
+github.com/elastic/go-elasticsearch/v7 v7.6.0/go.mod h1:OJ4wdbtDNk5g503kvlHLyErCgQwwzmDtaFC4XyOxXA4=
+github.com/gorilla/mux v1.7.4 h1:VuZ8uybHlWmqV03+zRzdwKL4tUnIp1MAQtp1mIFE1bc=
+github.com/gorilla/mux v1.7.4/go.mod h1:DVbg23sWSpFRCP0SfiEN6jmj59UnW/n46BH5rLB71So=
+github.com/jonboulle/clockwork v0.1.0 h1:VKV+ZcuP6l3yW9doeqz6ziZGgcynBVQO+obU0+0hcPo=
+github.com/jonboulle/clockwork v0.1.0/go.mod h1:Ii8DK3G1RaLaWxj9trq07+26W01tbo22gdxWY5EU2bo=
+github.com/lib/pq v1.3.0 h1:/qkRGz8zljWiDcFvgpwUpwIAPu3r07TDvs3Rws+o/pU=
+github.com/lib/pq v1.3.0/go.mod h1:5WUZQaWbwv1U+lTReE5YruASi9Al49XbQIvNi/34Woo=

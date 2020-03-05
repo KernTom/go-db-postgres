@@ -7,11 +7,19 @@ import (
 	"net/http"
 	"os"
 
-	"KairosDrive/src/kairos.drive/elast"
-	"KairosDrive/src/kairos.drive/utils/consts/ccomponents"
-	server "KairosDrive/src/kairos.drive/utils/srv"
+	"github.com/KernTom/go-elast-logger"
+	"github.com/KernTom/go-server"
 	_ "github.com/lib/pq"
 )
+
+//Drive component
+const Drive string = "Drive Logic"
+
+//HTTPService http Service used for basic http service errors
+const HTTPService string = "Http Service"
+
+//DBService used for Postgres database connection issues (not for query problems)
+const DBService string = "DB Connection"
 
 type contextKey string
 
@@ -43,11 +51,11 @@ var InitDB = func() {
 	err = srv.DB.Ping()
 	if err != nil {
 		srv.DB.Close()
-		elast.LogSys(nil, "500", "Database is gone Kairos Drive shutting down for restart", nil, ccomponents.DBService)
+		elast.LogSys(nil, "500", "Database is gone Kairos Drive shutting down for restart", nil, DBService)
 		srv.HTTP.Close()
 		panic(err)
 	}
-	elast.LogSys(nil, "200", "Successfully connected to database "+config[dbname]+" on "+config[dbhost]+":"+config[dbport], nil, ccomponents.DBService)
+	elast.LogSys(nil, "200", "Successfully connected to database "+config[dbname]+" on "+config[dbhost]+":"+config[dbport], nil, DBService)
 }
 
 func dbConfig() map[string]string {
@@ -86,7 +94,7 @@ func DoQuery(r *http.Request, sqlStatement string, args ...interface{}) (rows *s
 	err = srv.DB.Ping()
 	if err != nil {
 		srv.DB.Close()
-		elast.LogSys(r, "500", "Database is gone Kairos Drive shutting down for restart", nil, ccomponents.DBService)
+		elast.LogSys(r, "500", "Database is gone Kairos Drive shutting down for restart", nil, DBService)
 		srv.HTTP.Close()
 		panic(err)
 	}
